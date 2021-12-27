@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inroduction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header_section">
+        <p class="header_content">Hi, My name is Doohyun Hwang</p>
+    </div>
+    <div class="info_section">
+        <div class="info" id="profile">
+            <p class="info_content_title">Profile</p>
+        </div>
+        <div class="info" id="interest">
+            <p class="info_content_title">Interest</p>
+        </div>
+        <div class="info" id="goal">
+            <p class="info_content_title">Goal</p>
+        </div>
+    </div>
+    <script>
+        //div code when mouseover
+        const profile_HTML =
+            `<p class="content_title">Profile</p>
+                    <img src="images\myimg.jpg" alt="My image">
+                    <ul class="content_article">
+                        <li>
+                            <span class="article_tit">Name</span>
+                            <span class="article_content">Doohyun Hwang</span>
+                        </li>
+                        <li>
+                            <span class="article_tit">Age</span>
+                            <span class="article_content">25</span>
+                        </li>
+                        <li>
+                            <span class="article_tit">School</span>
+                            <span class="article_content">SNU</span>
+                        </li>
+                        <li>
+                            <span class="article_tit">Major</span>
+                            <span class="article_content">Mechanical Engineering</span>
+                        </li>
+                    </ul>`;
+        const interest_HTML =
+            `<p class="content_title">Interest</p>
+                    <div class="margin"></div>
+                    <ul class="content_article">
+                        <li>
+                            <span class="article_content">Backend Engineer</span>
+                        </li>
+                        <li>
+                            <span class="article_content">Football</span>
+                        </li>
+                        <li>
+                            <span class="article_content">Communication Skills</span>
+                        </li>
+                    </ul>`;
+
+        const goal_HTML =
+            `<p class="content_title">Goal</p>
+                    <div class="margin"></div>
+                    <ul class="content_article">
+                        <li>
+                            <span class="article_content">Backend Engineer</span>
+                        </li>
+                        <li>
+                            <span class="article_content">Football</span>
+                        </li>
+                        <li>
+                            <span class="article_content">Communication Skills</span>
+                        </li>
+                    </ul>`;
+
+
+        function handleMouseOver(HTML, id) {
+            const divTag = document.getElementById(id);
+            divTag.addEventListener("mouseover", function (event) {
+                divTag.innerHTML = HTML;
+            });
+        }
+
+        handleMouseOver(profile_HTML, "profile")
+        handleMouseOver(interest_HTML, "interest")
+        handleMouseOver(profile_HTML, "goal")
+
+    </script>
+</body>
+
+</html>
